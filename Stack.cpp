@@ -11,8 +11,8 @@
 template <typename T>
 Stack <T>::Stack (void)
 {
-    T data_;
-    T top;
+    Stack <T> stackData;
+    Stack <T> topOfStack;
 
 }
 
@@ -28,7 +28,7 @@ Stack <T>::Stack (const Stack & stack)
     stackData = stack.stackData;
 
     for (int i = 0; i < stackData; i++){
-        stackData[i] = arr.stackData[i];
+        stackData[i] = stack.stackData[i];
     }//end for
 
 
@@ -102,3 +102,7 @@ void Stack <T>::clear (void)
     delete [stackData];
 
 }
+
+// am I suppsoed to create the missing methods?
+// not sure because does not tell us to in the 
+//report but explicitly tells us to make the queue
