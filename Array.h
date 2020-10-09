@@ -18,6 +18,7 @@
 #define _ARRAY_H_
 
 #include <cstring>          // for size_t definition
+#include "Array_Base.h"
 
 /**
  * @class Array
@@ -25,7 +26,7 @@
  * Basic implementation of a standard array class for chars.
  */
 template <typename T>
-class Array
+class Array : public Array_Base <T>
 {
 public:
   /// Type definition of the element type.

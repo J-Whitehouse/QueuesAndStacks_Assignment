@@ -8,6 +8,9 @@
 #include "Array.h"
 #include <stdexcept>         // for std::out_of_bounds exception
 
+
+//Commented out methods instead of deleting in case I misunderstood project change
+
 //
 // Array
 //
@@ -81,6 +84,7 @@ Array <T>::~Array (void)
 
 }
 
+/* Moved to Array_Base and should be inherited
 //
 // operator =
 //
@@ -105,6 +109,25 @@ const Array <T> & Array <T>::operator = (const Array & rhs)
     }//end if
 
 }
+
+//
+// size
+//
+template <typename T>
+const size_t size (void)
+{
+    return cur_size_;
+}
+
+//
+// max_size
+//
+template <typename T>
+const size_t max_size (void)
+{
+    return max_size_;
+}
+
 
 //
 // operator []
@@ -160,7 +183,11 @@ void Array <T>::set (size_t index, T value)
     throw std::out_of_range;
 
 }
+*/
 
+
+
+/////////////////////////////////Important one for Array/////////////////////////
 //
 // resize
 //
@@ -182,6 +209,7 @@ void Array <T>::resize (size_t new_size)
 
 }
 
+/* Was moved to Array_Base and should be inherited
 //
 // find (char)
 //
@@ -270,3 +298,4 @@ void Array <T>::fill (T value)
     }//end for
 
 }
+*/ 
