@@ -31,6 +31,8 @@ public:
 	 */
   Fixed_Array (const Fixed_Array <T, N> & arr);
 	
+    // COMMENT You are to remove this constructor.
+    
   /**
    * Initializing constructor. The source array can be of any size
    * as long as they are of the same type.
@@ -58,6 +60,8 @@ public:
    */
   const Fixed_Array & operator = (const Fixed_Array <T, N> & rhs);
 
+    // COMMENT You are to remove this assignment operator.
+    
   /**
    * Assignment operator
    *

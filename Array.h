@@ -20,6 +20,9 @@
 #include <cstring>          // for size_t definition
 #include "Array_Base.h"
 
+// COMMENT You are required to remove methods that belong in
+// the array base class.
+
 /**
  * @class Array
  *

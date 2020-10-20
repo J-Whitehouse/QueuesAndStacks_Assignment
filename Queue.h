@@ -57,6 +57,10 @@ public:
     void clear();
 
 private:
+    // COMMENT You are to use your array class here. This
+    // will impact your source code, which makes it hard for
+    // me to give anymore insights on potential design issues.
+    
     // member variables
 
     //data in queue
