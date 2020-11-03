@@ -1,0 +1,229 @@
+Generating 'make' output using default input
+Generation Time: 0s
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment2/jarrwhit/cs36300-fall2020-composition'
+rm -rf driver.o
+rm -rf ./assignment2
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment2/jarrwhit/cs36300-fall2020-composition'
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment2/jarrwhit/cs36300-fall2020-composition'
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "driver.o" driver.cpp
+In file included from driver.cpp:10:0:
+Stack.h:105:3: error: ‘size_t’ does not name a type
+   size_t size (void) const;
+   ^
+In file included from Stack.h:125:0,
+                 from driver.cpp:10:
+Stack.inl:14:1: error: ‘size_t’ does not name a type
+ size_t Stack <T>::size (void) const
+ ^
+In file included from Stack.h:128:0,
+                 from driver.cpp:10:
+Stack.cpp: In member function ‘void Stack<T>::push(T)’:
+Stack.cpp:56:6: error: expected unqualified-id before ‘[’ token
+     T[topOfStack] = element;
+      ^
+Stack.cpp: In member function ‘void Stack<T>::pop()’:
+Stack.cpp:67:16: error: expected primary-expression before ‘[’ token
+     int top = T[topOfStack--];
+                ^
+Stack.cpp: In member function ‘void Stack<T>::clear()’:
+Stack.cpp:102:13: error: expected ‘]’ before ‘stackData’
+     delete [stackData];
+             ^
+Stack.cpp:102:22: error: expected ‘;’ before ‘]’ token
+     delete [stackData];
+                      ^
+In file included from driver.cpp:11:0:
+Queue.h: At global scope:
+Queue.h:53:5: error: ‘boolean’ does not name a type
+     boolean is_empty();
+     ^
+Queue.h:55:5: error: ‘size_t’ does not name a type
+     size_t size();
+     ^
+Queue.h:74:1: error: expected ‘;’ after class definition
+ }
+ ^
+In file included from driver.cpp:10:0:
+Stack.h: In instantiation of ‘class Stack<long unsigned int>’:
+driver.cpp:77:18:   required from here
+Stack.h:113:13: error: ‘Stack<T>::stackData’ has incomplete type
+   Stack <T> stackData;
+             ^
+Stack.h:24:7: error: declaration of ‘class Stack<long unsigned int>’
+ class Stack
+       ^
+Stack.h:115:13: error: ‘Stack<T>::size’ has incomplete type
+   Stack <T> size;
+             ^
+Stack.h:24:7: error: declaration of ‘class Stack<long unsigned int>’
+ class Stack
+       ^
+driver.cpp: In function ‘void stack::test_case1(Test_Result&)’:
+driver.cpp:78:25: error: ‘class Stack<long unsigned int>’ has no member named ‘size’
+     result.evaluate (s1.size () == 0 && s1.is_empty (), "initial stack should have size 0 and be empty");
+                         ^
+driver.cpp:85:23: error: ‘class Stack<long unsigned int>’ has no member named ‘size’
+   result.evaluate (s1.size () == count, "stack size does not match number of push operations");
+                       ^
+driver.cpp:88:23: error: ‘class Stack<long unsigned int>’ has no member named ‘size’
+   result.evaluate (s1.size () == s2.size (), "stack copy constructor failed");
+                       ^
+driver.cpp:88:37: error: ‘class Stack<long unsigned int>’ has no member named ‘size’
+   result.evaluate (s1.size () == s2.size (), "stack copy constructor failed");
+                                     ^
+driver.cpp: In function ‘void stack::test_case2(Test_Result&)’:
+driver.cpp:124:13: error: ‘class Stack<long unsigned int>’ has no member named ‘size’
+   while (s1.size () != 0)
+             ^
+In file included from driver.cpp:10:0:
+Stack.h: In instantiation of ‘class Stack<int>’:
+driver.cpp:149:15:   required from here
+Stack.h:113:13: error: ‘Stack<T>::stackData’ has incomplete type
+   Stack <T> stackData;
+             ^
+Stack.h:24:7: error: declaration of ‘class Stack<int>’
+ class Stack
+       ^
+Stack.h:115:13: error: ‘Stack<T>::size’ has incomplete type
+   Stack <T> size;
+             ^
+Stack.h:24:7: error: declaration of ‘class Stack<int>’
+ class Stack
+       ^
+driver.cpp: In function ‘void stack::test_case3(Test_Result&)’:
+driver.cpp:160:23: error: ‘class Stack<int>’ has no member named ‘size’
+   result.evaluate (s1.size () == s2.size (), "stack assignment operator failed");
+                       ^
+driver.cpp:160:37: error: ‘class Stack<int>’ has no member named ‘size’
+   result.evaluate (s1.size () == s2.size (), "stack assignment operator failed");
+                                     ^
+In file included from driver.cpp:11:0:
+Queue.h: In instantiation of ‘class Queue<long unsigned int>’:
+driver.cpp:178:18:   required from here
+Queue.h:63:15: error: ‘Queue<T>::queueData’ has incomplete type
+     Queue <T> queueData;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<long unsigned int>’
+ class Queue
+       ^
+Queue.h:66:15: error: ‘Queue<T>::firstInQueue’ has incomplete type
+     Queue <T> firstInQueue;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<long unsigned int>’
+ class Queue
+       ^
+Queue.h:69:15: error: ‘Queue<T>::queueSize’ has incomplete type
+     Queue <T> queueSize;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<long unsigned int>’
+ class Queue
+       ^
+driver.cpp: In function ‘void queue::test_case1(Test_Result&)’:
+driver.cpp:179:23: error: ‘class Queue<long unsigned int>’ has no member named ‘size’
+   result.evaluate (q1.size () == 0 && q1.is_empty (), "initial queue should have size 0 and be empty");
+                       ^
+driver.cpp:179:42: error: ‘class Queue<long unsigned int>’ has no member named ‘is_empty’
+   result.evaluate (q1.size () == 0 && q1.is_empty (), "initial queue should have size 0 and be empty");
+                                          ^
+driver.cpp:186:23: error: ‘class Queue<long unsigned int>’ has no member named ‘size’
+   result.evaluate (q1.size () == count, "size of queue is not equal to number of enqueue calls");
+                       ^
+driver.cpp:189:23: error: ‘class Queue<long unsigned int>’ has no member named ‘size’
+   result.evaluate (q1.size () == q2.size (), "copy constructor failed");
+                       ^
+driver.cpp:189:37: error: ‘class Queue<long unsigned int>’ has no member named ‘size’
+   result.evaluate (q1.size () == q2.size (), "copy constructor failed");
+                                     ^
+driver.cpp: In function ‘void queue::test_case3(Test_Result&)’:
+driver.cpp:258:23: error: ‘class Queue<long unsigned int>’ has no member named ‘size’
+   result.evaluate (q1.size () == 0, "clear method did not reset queue");
+                       ^
+In file included from driver.cpp:11:0:
+Queue.h: In instantiation of ‘class Queue<int>’:
+driver.cpp:272:15:   required from here
+Queue.h:63:15: error: ‘Queue<T>::queueData’ has incomplete type
+     Queue <T> queueData;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<int>’
+ class Queue
+       ^
+Queue.h:66:15: error: ‘Queue<T>::firstInQueue’ has incomplete type
+     Queue <T> firstInQueue;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<int>’
+ class Queue
+       ^
+Queue.h:69:15: error: ‘Queue<T>::queueSize’ has incomplete type
+     Queue <T> queueSize;
+               ^
+Queue.h:11:7: error: declaration of ‘class Queue<int>’
+ class Queue
+       ^
+driver.cpp: In function ‘void queue::test_case4(Test_Result&)’:
+driver.cpp:283:23: error: ‘class Queue<int>’ has no member named ‘size’
+   result.evaluate (q1.size () == q2.size (), "assignment operator failed");
+                       ^
+driver.cpp:283:37: error: ‘class Queue<int>’ has no member named ‘size’
+   result.evaluate (q1.size () == q2.size (), "assignment operator failed");
+                                     ^
+In file included from Stack.h:128:0,
+                 from driver.cpp:10:
+Stack.cpp: In instantiation of ‘Stack<T>::~Stack() [with T = long unsigned int]’:
+driver.cpp:77:18:   required from here
+Stack.cpp:43:5: error: using invalid field ‘Stack<T>::stackData’
+     delete[] stackData;
+     ^
+Stack.cpp: In instantiation of ‘Stack<T>::Stack(const Stack<T>&) [with T = long unsigned int]’:
+driver.cpp:87:24:   required from here
+Stack.cpp:28:15: error: ‘const class Stack<long unsigned int>’ has no member named ‘stackData’
+     stackData = stack.stackData;
+               ^
+Stack.cpp:28:15: error: using invalid field ‘Stack<T>::stackData’
+Stack.cpp:30:23: error: using invalid field ‘Stack<T>::stackData’
+     for (int i = 0; i < stackData; i++){
+                       ^
+Stack.cpp:31:39: error: ‘const class Stack<long unsigned int>’ has no member named ‘stackData’
+         stackData[i] = stack.stackData[i];
+                                       ^
+Stack.cpp:31:18: error: using invalid field ‘Stack<T>::stackData’
+         stackData[i] = stack.stackData[i];
+                  ^
+Stack.cpp: In instantiation of ‘void Stack<T>::pop() [with T = long unsigned int]’:
+driver.cpp:125:12:   required from here
+Stack.cpp:68:12: error: return-statement with a value, in function returning 'void' [-fpermissive]
+     return top;
+            ^
+Stack.cpp: In instantiation of ‘Stack<T>::~Stack() [with T = int]’:
+driver.cpp:149:15:   required from here
+Stack.cpp:43:5: error: using invalid field ‘Stack<T>::stackData’
+     delete[] stackData;
+     ^
+Stack.cpp: In instantiation of ‘const Stack<T>& Stack<T>::operator=(const Stack<T>&) [with T = int]’:
+driver.cpp:158:6:   required from here
+Stack.cpp:79:10: error: ‘const class Stack<int>’ has no member named ‘size’
+     size = rhs.size;
+          ^
+Stack.cpp:79:10: error: using invalid field ‘Stack<T>::size’
+Stack.cpp:82:9: error: using invalid field ‘Stack<T>::stackData’
+         delete[] stackData;
+         ^
+Stack.cpp:84:19: error: ‘const class Stack<int>’ has no member named ‘size’
+         stackData = new T [rhs.size];
+                   ^
+Stack.cpp:84:19: error: using invalid field ‘Stack<T>::stackData’
+Stack.cpp:86:14: error: ‘const class Stack<int>’ has no member named ‘size’
+         size = rhs.size;
+              ^
+Stack.cpp:86:14: error: using invalid field ‘Stack<T>::size’
+Stack.cpp:87:27: error: using invalid field ‘Stack<T>::size’
+         for (int i = 0; i < size; i++){
+                           ^
+Stack.cpp:88:37: error: ‘const class Stack<int>’ has no member named ‘stackData’
+         stackData[i] = rhs.stackData[i];
+                                     ^
+Stack.cpp:88:18: error: using invalid field ‘Stack<T>::stackData’
+         stackData[i] = rhs.stackData[i];
+                  ^
+make[1]: *** [driver.o] Error 1
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment2/jarrwhit/cs36300-fall2020-composition'
+make: *** [assignment2] Error 2
